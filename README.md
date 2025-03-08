@@ -133,8 +133,32 @@ Ensure you have Python installed, then run:
 pip install pandas numpy pillow tqdm
 ```
 
+### 3. Organize the Dataset
 
+Update the paths in data.py to match your local directory structure. For example:
 
+- **csv_file**: Path to fold_1_train.csv or fold_1_test.csv.
+- **rgb_folder**: Path to the folder containing RGB images.
+- **annotation_folder**: Path to the folder containing annotation CSV files.
+- **mask_folder**: Path to the folder containing mask images.
+- **output_folder**: Path to the output folder (e.g., train or test).
+
+```bash
+python data.py
+```
+
+### 4.
+
+Update the paths in organise_main.py to match your local directory structure. For example:
+
+- **image_dir**: Path to the rgb folder.
+- **mask_dir**: Path to the mask folder.
+- **annotation_dir**: Path to the annotation folder.
+- **output_dir**: Path to the output folder for organized data.
+
+```bash
+python organise_main.py
+```
 ---
 
 ## Code Files
@@ -145,12 +169,13 @@ The dataset was organized using the following Python scripts:
 
 ---
 
+**Additional Notes:**
+   - Rectangular masks in some cases output entirely white images. Therefore, two separate datasets (rectangular and polyline) were created to serve object detection and semantic segmentation tasks respectively.
+   - A `README.txt` is generated in the output folder summarizing the number of images per tissue type for each task.
+
 ## Citation
 
 If you use this dataset, please cite the original NuCLS paper:
 
-**Additional Notes:**
-   - Rectangular masks in some cases output entirely white images. Therefore, two separate datasets (rectangular and polyline) were created to serve object detection and semantic segmentation tasks respectively.
-   - A `README.txt` is generated in the output folder summarizing the number of images per tissue type for each task.
 
 
