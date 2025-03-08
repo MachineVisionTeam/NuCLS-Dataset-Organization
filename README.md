@@ -8,6 +8,8 @@ This repository contains the organized NuCLS dataset, which is a large-scale dat
 
 The NuCLS dataset contains over 220,000 labeled nuclei from breast cancer images from TCGA. The nuclei were annotated by pathologists, pathology residents, and medical students. 
 
+![NuCLS Dataset](images/NuCLS_banner.svg.x20.jpeg)
+
 ## Dataset Details
 
 **Source:** [NuCLS Website](https://sites.google.com/view/nucls/home)
