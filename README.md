@@ -118,7 +118,11 @@ The code for this step is available in the file:
 ---
 ![Object Detection Images](images/oject_tumor.jpeg)
 
+*Object Detection Images: Tumor*
+
 ![Semantic Segmentation Images](images/semantic_tumor.jpeg)
+
+*Semantic Segmentation Images: Tumor*
 
 ## Usage Instructions
 
