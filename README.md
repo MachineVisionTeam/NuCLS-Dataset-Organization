@@ -131,8 +131,8 @@ The code for this step is available in the file:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/nucls-dataset-organization.git
-cd nucls-dataset-organization
+git clone https://github.com/chandana-koganti14/NuCLS-Dataset-Organization.git
+cd NuCLS-Dataset-Organization
 ```
 
 ### 2. Install Dependencies
