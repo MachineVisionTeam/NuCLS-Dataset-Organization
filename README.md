@@ -118,7 +118,7 @@ The code for this step is available in the file:
 ---
 ![Object Detection Images](images/patch_object.png)
 
-![Semantic Segmentation Images](images/semantic_combined_tumor_2.png)
+![Semantic Segmentation Images](images/semantic_tumor.png)
 
 ## Usage Instructions
 
