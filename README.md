@@ -147,8 +147,6 @@ Update the paths in data.py to match your local directory structure. For example
 python data.py
 ```
 
-### 4.
-
 Update the paths in organise_main.py to match your local directory structure. For example:
 
 - **image_dir**: Path to the rgb folder.
