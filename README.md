@@ -171,9 +171,6 @@ The dataset was organized using the following Python scripts:
    - Rectangular masks in some cases output entirely white images. Therefore, two separate datasets (rectangular and polyline) were created to serve object detection and semantic segmentation tasks respectively.
    - A `README.txt` is generated in the output folder summarizing the number of images per tissue type for each task.
 
-## Citation
-
-If you use this dataset, please cite the original NuCLS paper:
 
 
 
