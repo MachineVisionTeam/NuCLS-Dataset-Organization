@@ -1,16 +1,12 @@
 # NuCLS Dataset Organization
 
-This repository contains scripts and instructions for organizing the NuCLS dataset, a large-scale collection for nucleus classification, localization, and segmentation in breast cancer images.
+This repository contains the organized NuCLS dataset, which is a large-scale dataset for nucleus classification, localization, and segmentation in breast cancer. The dataset has been preprocessed and organized into `train`, `test`, and `val` folders, with separate subfolders for `rgb`, `annotation`, and `mask` data. Additionally, the dataset is further organized for two primary tasks: **Object Detection** and **Semantic Segmentation**.
 
-## Overview
+---
 
-The NuCLS dataset contains over **220,000 labeled nuclei** from breast cancer images sourced from TCGA. Annotations were created through a collaborative effort among pathologists, pathology residents, and medical students using the Digital Slide Archive.
+## Dataset Overview
 
-This dataset is ideal for:
-- Nuclear detection
-- Classification
-- Segmentation
-- Interrater analysis
+The NuCLS dataset contains over 220,000 labeled nuclei from breast cancer images from TCGA. The nuclei were annotated by pathologists, pathology residents, and medical students. 
 
 ## Dataset Details
 
@@ -45,24 +41,116 @@ Each CSV file includes:
 
 **Note:** Unlike the CSV files, the mask images do not differentiate between bounding boxes and segmentations.
 
-## Data Organization Process
 
-In this repository, the dataset has been reorganized as follows:
+### Key Features
+- **13 Cell Types**: Includes tumor, fibroblast, lymphocyte, macrophage, and more.
+- **Annotation Types**: Rectangular bounding boxes and polyline masks.
+- **Tasks Supported**: Object Detection and Semantic Segmentation.
 
-1. **Selection:**
-   - **Dataset type:** Corrected single-rater dataset.
-   - **Split:** Used folder-1 for train and test split (RGB, annotation, and mask).
+---
 
-2. **Organization:**
-   - **Train, Test, and Validation:** Integrated into a single folder to allow flexible splitting during experiments.
-   - **Sub-categories:** Organized based on cell types into:
-     - **Object Detection:** Uses rectangular annotations (bounding boxes).  
-       *Note: Masks are removed as they are not required for object detection.*
-     - **Semantic Segmentation:** Uses polygon annotations (polylines) with corresponding masks.
+## Dataset Selection and Organization Workflow
 
-3. **Additional Notes:**
+### Dataset Selection
+The NuCLS dataset provides both **single-rater** and **multi-rater** datasets. For this project:
+- **Single-Rater Dataset**: Selected for consistency in annotations.
+- **Corrected Single-Rater Dataset**: Chosen to ensure high-quality annotations.
+- **Train-Test Split**: Used **folder-1** from the train-test split folder, which includes `fold_1_train.csv` and `fold_1_test.csv`.
+
+### Step 1: Organizing RGB, Annotation, and Mask Folders Based on CSV Files
+The dataset was initially organized using the `fold_1_train.csv` and `fold_1_test.csv` files. These CSV files were used to match and organize the `rgb`, `annotation`, and `mask` folders into `train`, `test`, and `val` sets.
+
+The code for this step is available in the file:  
+📄 **`data.py`**
+
+After organizing the dataset based on the CSV files, the dataset was structured into `train`, `test`, and `val` folders. Each folder contains the following subfolders:
+- **rgb**: Contains the RGB images.
+- **annotation**: Contains CSV files with nucleus annotations.
+- **mask**: Contains mask images for semantic segmentation.
+
+The folder structure is as follows:
+
+```plaintext
+train/
+├── rgb/
+├── annotation/
+└── mask/
+test/
+├── rgb/
+├── annotation/
+└── mask/
+val/
+├── rgb/
+├── annotation/
+└── mask/
+```
+
+
+### Step 2: Organizing for Object Detection and Semantic Segmentation
+The dataset was further organized into two tasks:
+1. **Object Detection**: Contains cropped images for nuclei with rectangular annotations. No masks are provided for this task.
+2. **Semantic Segmentation**: Contains cropped images and corresponding masks for nuclei with polyline annotations.
+
+The folder structure for these tasks is as follows:
+
+```plaintext
+main_organised/
+├── object_detection/
+│   ├── tumor/
+│   │   └── images/  # Cropped nuclei (rectangles)
+│   ├── fibroblast/
+│   │   └── images/
+│   ...
+└── semantic_segmentation/
+    ├── tumor/
+    │   ├── images/  # Cropped nuclei
+    │   └── masks/   # Binary polygon masks (0: background, 255: nucleus)
+    ├── fibroblast/
+    │   ├── images/
+    │   └── masks/
+    ...
+
+```
+
+The code for this step is available in the file:  
+📄 **`organise_main.py`**
+
+---
+
+## Usage Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/nucls-dataset-organization.git
+cd nucls-dataset-organization
+```
+
+### 2. Install Dependencies
+Ensure you have Python installed, then run:
+
+```bash
+pip install pandas numpy pillow tqdm
+```
+
+
+
+---
+
+## Code Files
+
+The dataset was organized using the following Python scripts:
+- 📄 **`data.py`**: Organizes `rgb`, `annotation`, and `mask` folders based on CSV files.
+- 📄 **`organise_main.py`**: Further organizes the dataset for Object Detection and Semantic Segmentation.
+
+---
+
+## Citation
+
+If you use this dataset, please cite the original NuCLS paper:
+
+**Additional Notes:**
    - Rectangular masks in some cases output entirely white images. Therefore, two separate datasets (rectangular and polyline) were created to serve object detection and semantic segmentation tasks respectively.
    - A `README.txt` is generated in the output folder summarizing the number of images per tissue type for each task.
 
-## Repository Structure
 
