@@ -116,6 +116,9 @@ The code for this step is available in the file:
 📄 **`organise_main.py`**
 
 ---
+![Object Detection Images](images/patch_object.png)
+
+![Semantic Segmentation Images](images/semantic_combined_tumor_2.png)
 
 ## Usage Instructions
 
