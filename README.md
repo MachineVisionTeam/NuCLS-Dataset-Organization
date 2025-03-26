@@ -3,7 +3,52 @@
 This repository contains the organized NuCLS dataset, which is a large-scale dataset for nucleus classification, localization, and segmentation in breast cancer. The dataset has been preprocessed and organized into `train`, `test`, and `val` folders, with separate subfolders for `rgb`, `annotation`, and `mask` data. Additionally, the dataset is further organized for two primary tasks: **Object Detection** and **Semantic Segmentation**.
 
 ---
+## Citations
 
+If you use this dataset or code in your research, please cite the following papers:
+
+### NuCLS: A Scalable Crowdsourcing, Deep Learning Approach and Dataset for Nucleus Classification, Localization, and Segmentation
+
+Mohamed Amgad, Lamees A. Atteya, Hagar Hussein, et al.  
+**GigaScience**, 11 (2022).  
+DOI: [10.1093/gigascience/giac037](https://doi.org/10.1093/gigascience/giac037)  
+arXiv: [2102.09099 [eess.IV]](https://doi.org/10.48550/arXiv.2102.09099)
+
+### Structured Crowdsourcing Enables Convolutional Segmentation of Histology Images
+
+Mohamed Amgad, Habiba Elfandy, Hagar Hussein, Lamees A Atteya, Mai A T Elsebaie, et al.  
+**Bioinformatics**, Volume 35, Issue 18, September 2019, Pages 3461–3467.  
+DOI: [10.1093/bioinformatics/btz083](https://doi.org/10.1093/bioinformatics/btz083)
+
+---
+
+### BibTeX Entries
+
+For convenience, here are the BibTeX entries for inclusion in academic papers:
+
+```bibtex
+@article{amgad2022nucls,
+  title={NuCLS: A scalable crowdsourcing, deep learning approach and dataset for nucleus classification, localization and segmentation},
+  author={Amgad, Mohamed and Atteya, Lamees A and Hussein, Hagar and others},
+  journal={GigaScience},
+  volume={11},
+  year={2022},
+  publisher={Oxford University Press},
+  doi={10.1093/gigascience/giac037}
+}
+
+@article{amgad2019structured,
+  title={Structured crowdsourcing enables convolutional segmentation of histology images},
+  author={Amgad, Mohamed and Elfandy, Habiba and Hussein, Hagar and others},
+  journal={Bioinformatics},
+  volume={35},
+  number={18},
+  pages={3461--3467},
+  year={2019},
+  publisher={Oxford University Press},
+  doi={10.1093/bioinformatics/btz083}
+}
+```
 ## Dataset Overview
 
 The NuCLS dataset contains over 220,000 labeled nuclei from breast cancer images from TCGA. The nuclei were annotated by pathologists, pathology residents, and medical students. 
