@@ -6,7 +6,8 @@ This repository contains the organized NuCLS dataset, which is a large-scale dat
 ## Citations
 
 If you use this dataset or code in your research, please cite the following papers:
-### 
+### Task-Ready PanNuke and NuCLS Datasets: Reorganization, Synthetic Data Generation, and Experimental Evaluation.
+
 **Koganti, S.C., Yellu, S., Yun, J., & Lee, S.** (2025). Task-Ready PanNuke and NuCLS Datasets: Reorganization, Synthetic Data Generation, and Experimental Evaluation. *IEEE Access*, **13**, 125275–125286. https://doi.org/10.1109/ACCESS.2025.3589477
 
 ### NuCLS: A Scalable Crowdsourcing, Deep Learning Approach and Dataset for Nucleus Classification, Localization, and Segmentation
