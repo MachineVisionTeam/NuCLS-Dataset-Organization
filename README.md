@@ -6,6 +6,8 @@ This repository contains the organized NuCLS dataset, which is a large-scale dat
 ## Citations
 
 If you use this dataset or code in your research, please cite the following papers:
+### 
+**Koganti, S.C., Yellu, S., Yun, J., & Lee, S.** (2025). Task-Ready PanNuke and NuCLS Datasets: Reorganization, Synthetic Data Generation, and Experimental Evaluation. *IEEE Access*, **13**, 125275–125286. https://doi.org/10.1109/ACCESS.2025.3589477
 
 ### NuCLS: A Scalable Crowdsourcing, Deep Learning Approach and Dataset for Nucleus Classification, Localization, and Segmentation
 
@@ -27,6 +29,16 @@ DOI: [10.1093/bioinformatics/btz083](https://doi.org/10.1093/bioinformatics/btz0
 For convenience, here are the BibTeX entries for inclusion in academic papers:
 
 ```bibtex
+@article{11080424,
+  author={Koganti, Sai Chandana and Yellu, Siri and Yun, Jihoon and Lee, Sanghoon},
+  journal={IEEE Access}, 
+  title={Task-Ready PanNuke and NuCLS Datasets: Reorganization, Synthetic Data Generation, and Experimental Evaluation}, 
+  year={2025},
+  volume={13},
+  pages={125275-125286},
+  doi={10.1109/ACCESS.2025.3589477}
+}
+
 @article{amgad2022nucls,
   title={NuCLS: A scalable crowdsourcing, deep learning approach and dataset for nucleus classification, localization and segmentation},
   author={Amgad, Mohamed and Atteya, Lamees A and Hussein, Hagar and others},
